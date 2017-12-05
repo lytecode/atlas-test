@@ -1,12 +1,7 @@
 <template>
-  <div class="product-item">
-    <router-link to="/" class="back-link">BACK</router-link>
-    <div class="product-title">{{ product.title }}</div>
-    <div class="product-details">
-      <div class="inventory">In Stock: {{ product.inventory }}</div>
-      <action-button name="real">Real</action-button>
-      <button class="add-button" :disabled="!product.inventory"
-        @click="addToCart(product)">{{ product.inventory > 0 ? "Add to login" : "Out Of Stock" }}</button>
+  <div>
+    <div>
+      It will be a great opportunity to work with you.
     </div>
   </div>
 </template>
@@ -23,8 +18,7 @@
         'allProducts'
       ]),
       product () {
-        let id = parseInt(this.$route.params.id)
-        return this.allProducts.find((p) => p.id === id) || {}
+        console.log('test')
       }
     },
     methods: {

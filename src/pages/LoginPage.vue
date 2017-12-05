@@ -11,7 +11,9 @@
         <action-button class="submitbutton" name="SIGN IN"></action-button>
       </div>
       <div class="help-text">
-        <p>Copyright George Vue (SPA)</p>
+        <router-link to="/signup" class="foot-links">Forgot password?</router-link>
+        <router-link to="/signup" class="foot-links">Don't have an account? Sign Up </router-link>
+        <router-link to="/signup" class="foot-links">Have an issue with 2-factor authentication?</router-link>
       </div>
     </div>
   </div>
@@ -78,11 +80,13 @@
 }
 
 .buttons {
-  padding: 0 30px;
+  padding: 5px 30px;
+  margin: auto;
 }
 
 .checkbox {
   /*width:70%;*/
+  text-align: center;
   float:left;
 }
 
@@ -92,8 +96,19 @@
 }
 
 .help-text {
-  margin-top: 20px;
+  margin-top: 80px;
   font-size: 12px;
   color: #ffffff;
+  text-align: center;
+}
+
+.foot-links {
+  /*width:70%;*/
+  padding: 5px;
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 15px;
 }
 </style>

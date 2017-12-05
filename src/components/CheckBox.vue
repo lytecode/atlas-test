@@ -1,8 +1,10 @@
 <template>
-  <div class="checkbox-wrapper" @click="check">
-    <div :class="{ checked: checked }"></div>
-    <div class="title">{{ name }}</div>
-  </div>
+  <table>
+    <tr class="checkbox-wrapper" align="center">
+      <td><input type="checkbox"  v-model="checked"  v-on:click="check()" :value="name" ></td>
+      <td class="title">{{ name }}</td>
+    </tr>
+  </table>
 </template>
 
 <script>
@@ -23,12 +25,12 @@
 
 <style scoped>
   .checkbox-wrapper {
-    color: purple;
+    /*text-align-all: center;*/
   }
   .title {
-    color: #484c57;
+    color: black;
+    padding-left: 8px;
     font-size: 12px;
-    font-weight: 500;
   }
 </style>
 tyle>

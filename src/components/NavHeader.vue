@@ -1,8 +1,10 @@
 <template>
   <div class="menu-links">
-    <router-link to="/">coinbase</router-link>
+    <router-link to="/">
+      <div class="logo">coinbase</div>
+    </router-link>
     <div class="navs">
-      <router-link to="/products">Products</router-link>
+      <drop-down />
       <router-link to="/help">Help</router-link>
       <router-link to="/charts">Charts</router-link>
       <router-link to="/signup">Sign Up</router-link>
@@ -13,7 +15,15 @@
 <script>
 import { mapGetters } from 'vuex'
 
+import DropDown from '@/components/DropDown'
+
 export default {
+  components: {
+    DropDown
+  },
+  data () {
+    return { active: false }
+  },
   computed: {
     // mix the getters into the computed object
     ...mapGetters([
@@ -31,11 +41,17 @@ export default {
   color: #ffffff;
   margin-right: 30px;
   font-size: 14px;
-  font-weight: bold;
 }
 .navs {
   /*border-bottom: 1px solid #b3b3b3;*/
   float: right;
   padding: 0px 50px;
+  font-weight: 500;
+}
+.logo {
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  padding: 7px 0 0 40px;
 }
 </style>

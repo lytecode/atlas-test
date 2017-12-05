@@ -21,9 +21,14 @@ export default {
 
 <style>
 body {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  /*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+  font-family: 'Lato', sans-serif;
   font-size: 14px;
+  font-weight: 300;
   line-height: 20px;
+  /*margin: 0 0 58px;*/
+  /*font-size: 14px;*/
+  /*line-height: 20px;*/
   color: #333;
   background-color: #0667d0;
 }
