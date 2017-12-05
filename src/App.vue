@@ -49,4 +49,10 @@ body {
   /*padding: 30px 50px;*/
 }
 
+nav li:hover,
+nav li.router-link-active,
+nav li.router-link-exact-active {
+  background-color: indianred;
+  cursor: pointer;
+}
 </style>

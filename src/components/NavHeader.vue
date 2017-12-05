@@ -7,7 +7,8 @@
       <drop-down />
       <router-link to="/help">Help</router-link>
       <router-link to="/charts">Charts</router-link>
-      <router-link to="/signup">Sign Up</router-link>
+      <router-link to="/signin">Sign In</router-link>
+      <router-link to="/signup"><button class="button">Sign Up</button></router-link>
     </div>
   </div>
 </template>
@@ -16,10 +17,12 @@
 import { mapGetters } from 'vuex'
 
 import DropDown from '@/components/DropDown'
+import ActionButton from '@/components/ActionButton'
 
 export default {
   components: {
-    DropDown
+    DropDown,
+    ActionButton
   },
   data () {
     return { active: false }
@@ -53,5 +56,12 @@ export default {
   font-size: 25px;
   font-weight: 400;
   padding: 7px 0 0 40px;
+}
+.button {
+  color: white;
+  width: 85.39px;
+  height: 42px;
+  border: 2px solid white;
+  background-color: transparent;
 }
 </style>
