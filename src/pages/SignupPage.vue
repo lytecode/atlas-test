@@ -4,14 +4,16 @@
     <div class="product-title">{{ product.title }}</div>
     <div class="product-details">
       <div class="inventory">In Stock: {{ product.inventory }}</div>
+      <action-button name="real">Real</action-button>
       <button class="add-button" :disabled="!product.inventory"
-        @click="addToCart(product)">{{ product.inventory > 0 ? "Add to cart" : "Out Of Stock" }}</button>
+        @click="addToCart(product)">{{ product.inventory > 0 ? "Add to login" : "Out Of Stock" }}</button>
     </div>
   </div>
 </template>
 
 <script>
   import { mapActions, mapGetters } from 'vuex'
+  import ActionButton from '../components/ActionButton.vue'
   export default {
     mounted () {
       this.getAllProducts()
@@ -30,7 +32,8 @@
         'getAllProducts',
         'addToCart'
       ])
-    }
+    },
+    components: { ActionButton }
   }
 </script>
 

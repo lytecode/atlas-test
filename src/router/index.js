@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import CartPage from '@/pages/CartPage'
-import HomePage from '@/pages/HomePage'
-import ProductPage from '@/pages/ProductPage'
+import HelpPage from '@/pages/HelpPage'
+import LoginPage from '@/pages/LoginPage'
+import SignupPage from '@/pages/SignupPage'
 
 Vue.use(Router)
 
@@ -10,18 +10,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomePage
+      name: 'login',
+      component: LoginPage
     },
     {
-      path: '/cart',
-      name: 'cart',
-      component: CartPage
+      path: '/help',
+      name: 'help',
+      component: HelpPage
     },
     {
-      path: '/product/:id',
-      name: 'product',
-      component: ProductPage
+      path: '/signup',
+      name: 'signup',
+      component: SignupPage
     }
   ]
 })

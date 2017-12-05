@@ -1,8 +1,8 @@
 {
-  "name": "vue-spa",
+  "name": "coinbase",
   "version": "1.0.0",
-  "description": "Vue.Js Single Page App example",
-  "author": "Anirudh Sanjeev <skyronic@gmail.com>",
+  "description": "Coinbas for Atlas test",
+  "author": "George Iwu",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",

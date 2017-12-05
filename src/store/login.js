@@ -1,4 +1,4 @@
-import shop from '@/api/shop'
+import shop from '@/api/authenticate'
 
 const state = {
   added: [],
@@ -34,7 +34,7 @@ const mutations = {
     }
   },
   checkout_request (state) {
-    // clear cart
+    // clear login
     state.added = []
     state.lastCheckout = null
   },
@@ -42,7 +42,7 @@ const mutations = {
     state.lastCheckout = 'successful'
   },
   checkout_failure (state, savedCartItems) {
-    // rollback to the cart saved before sending the request
+    // rollback to the login saved before sending the request
     state.added = savedCartItems
     state.lastCheckout = 'failed'
   }

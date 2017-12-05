@@ -1,23 +1,19 @@
 <template>
 <div class="app">
   <div class="header">
-  <header-bar></header-bar>
+    <nav-header></nav-header>
   </div>
   <div class="page">
     <router-view></router-view>
-    <div class="help-text">
-      <p>Vue.js 2 Single Page App (SPA) Example with vuex and vue-router.</p>
-      <a href="https://github.com/skyronic/vue-spa">View Source Code</a>
-    </div>
   </div>
 </div>
 </template>
 
 <script>
-import HeaderBar from '@/components/HeaderBar'
+import NavHeader from '@/components/NavHeader'
 export default {
   components: {
-    HeaderBar
+    NavHeader
   },
   name: 'app'
 }
@@ -25,8 +21,11 @@ export default {
 
 <style>
 body {
-  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
   color: #333;
+  background-color: #0667d0;
 }
 .app {
   display: flex;
@@ -35,18 +34,14 @@ body {
 }
 
 .header {
-  border-bottom: 1px solid #b3b3b3;
+  /*border-bottom: 1px solid #b3b3b3;*/
   width: 100%;
-  padding: 30px 50px;
+  padding: 20px 30px;
 }
 
 .page {
   width: 100%;
-  padding: 30px 50px;
+  /*padding: 30px 50px;*/
 }
 
-.help-text {
-  margin-top: 20px;
-  font-size: 12px;
-}
 </style>

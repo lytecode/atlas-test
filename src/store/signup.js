@@ -1,4 +1,4 @@
-import shop from '@/api/shop'
+import shop from '@/api/authenticate'
 
 const state = {
   all: []
@@ -9,7 +9,7 @@ const actions = {
     commit('add_to_cart', product.id)
   },
   getAllProducts ({commit}) {
-    shop.getProducts(products => {
+    shop.getFaqs(products => {
       commit('recieve_products', products)
     })
   }
